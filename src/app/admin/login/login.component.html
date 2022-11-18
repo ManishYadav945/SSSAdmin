@@ -1,0 +1,76 @@
+Horizontal Form -->
+
+<div class="container-fluid">
+  <div class="row space">
+    <div class="col-md-4 offset-md-4 pt-5">
+     /.login-logo 
+       <div class="card">
+        <div class="card-header text-center">
+          <a href="../../index2.html"><h2>Login</h2></a>
+        </div>
+        <div class="card-body">
+          <h5 class="text-center text-secondary">Sign in to start your session</h5>
+          <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+            <div class="input-group mb-4">
+              <input
+                type="email"
+                class="form-control p-4"
+                formControlName="username"
+                placeholder="Username"
+              />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span ><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-4">
+              <input [type]="password" class="form-control  p-4" formControlName="password"placeholder="Password"/>
+              <div class="input-group-append"> 
+            <button  (click)="onClick()" class="input-group-text">
+            <span class="fa fa-eye" *ngIf="!show"></span> 
+            <span class="fa fa-eye-slash" *ngIf="show"></span>
+            </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 p-0">
+                <div class="icheck-primary p-2">
+                  <input  type="checkbox" id="remember "  />
+                  <label for="remember" class="pl-2 text-secondary " > Remember Me </label>
+                </div>
+              </div> 
+              /.col 
+               <div class="col-6">
+                <button type="submit" class="btn btn-block">Sign In</button>
+              </div>
+              /.col
+             </div>
+          </form>
+        </div> 
+        /.card-body
+      </div>
+      /.card
+   </div>
+  </div>
+</div>  
+
+/.card
+    
+    <div class="container-fluid">
+  <form class="register-form">
+    <div class="form_body">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+           <a href="../../index2.html"><h2>Login</h2></a>
+        </div>
+      </div>
+      <div class="row">      
+        <div class="col-md-6 col-sm-6 col-lg-6 ">
+           <label for="firstName">NAME</label>
+            <input name="firstName" class="form-control" type="text">    
+        </div>  
+        </div>
+    </div>
+  </form>
+</div>
